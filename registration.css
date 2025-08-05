@@ -1,0 +1,54 @@
+/* registration.css */
+
+/* Body styles */
+body {
+    font-family:'Times New Roman', Times, serif;
+    background-color: #ffffff;
+    margin: 0;
+    padding: 0;
+}
+
+
+div[name="form"] {
+    max-width: 400px;
+    margin: 20px auto;
+    padding: 20px;
+    border-radius: 8px;
+    border-color: #333;
+    background-color:aliceblue;
+    background-position: center;
+}
+
+
+h1 {
+    text-align: center;
+    color: #333;
+}
+
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+select,
+input[type="date"] {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+
+#submit {
+    width: 100%;
+    background-color: #4CAF50;
+    color: white;
+    padding: 12px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
