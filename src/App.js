@@ -1,25 +1,43 @@
-import logo from './logo.svg';
-import './App.css';
-
-function App() {
+import React from 'react';
+import "./text.css";
+function HELLO(){
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <h1>Hello World!!</h1>
+      <form>
+        <table>
+          <tbody>
+            <tr>
+              <td>Name:</td>
+              <td><input type="text" name="name" /></td>
+            </tr>
+            <tr>
+              <td>E-mail:</td>
+              <td><input type="email" name="email" /></td>
+            </tr>
+            <tr>
+              <td>Website:</td>
+              <td><input type="url" name="website" /></td>
+            </tr>
+            <tr>
+              <td>Classes:</td>
+              <td><textarea name="comment" rows="5" cols="40"></textarea></td>
+            </tr>
+            <tr>
+              <td>Gender:</td>
+              <td>
+                <input type="radio" name="gender" value="female" /> Female
+                <input type="radio" name="gender" value="male" /> Male
+              </td>
+            </tr>
+            <tr>
+              <td colSpan="2">
+                <input type="submit" name="submit" value="Submit" />
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </form>
     </div>
   );
-}
-
-export default App;
+}export default HELLO;
