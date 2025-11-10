@@ -1,0 +1,320 @@
+/* Base styles */
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Arial, sans-serif;
+  background: #fff;
+  color: #333;
+}
+
+.homepage {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Navbar styles (MUI compatible) */
+.navbar {
+  background: linear-gradient(90deg, #003366 70%, #0055a5 100%);
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+.logo {
+  font-size: 2rem;
+  font-weight: bold;
+  letter-spacing: 2px;
+  text-shadow: 1px 2px 8px #0055a544;
+}
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+  margin: 0;
+}
+.nav-links li a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.08rem;
+  padding: 0.3rem 1rem;
+  border-radius: 20px;
+  transition: background 0.15s;
+}
+.nav-links li a:hover {
+  background: #ffcc00;
+  color: #003366;
+  box-shadow: 0 2px 8px #ffcc0044;
+}
+.logo-img {
+  height: 40px;
+  width: 40px;
+  margin-right: 12px;
+  vertical-align: middle;
+  border-radius: 50%;
+  box-shadow: 0 2px 8px #00336644;
+}
+
+/* Hero section with cinematic background parallax */
+.hero {
+  background: linear-gradient(rgba(0,51,102,0.8), rgba(0,51,102,0.8)), url('https://coek.dypgroup.edu.in/wp-content/uploads/2017/06/t1538554792_OJmiiK8OlI-1.jpg');
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+  color: #fff;
+  padding: 6rem 2rem 4rem;
+  text-align: center;
+  position: relative;
+  min-height: 70vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.hero h1 {
+  font-size: 3.2rem;
+  margin-bottom: 1rem;
+  text-shadow: 2px 4px 16px #00336688;
+}
+.hero p {
+  font-size: 1.35rem;
+  margin-bottom: 2rem;
+  color: #eee;
+  text-shadow: 1px 2px 8px #0055a544;
+}
+.cta-btn {
+  background: #ffcc00;
+  color: #003366;
+  padding: 1rem 2rem;
+  border-radius: 30px;
+  font-weight: bold;
+  font-size: 1.15rem;
+  border: none;
+  box-shadow: 0 4px 16px #ffcc0044;
+  transition: background 0.15s, box-shadow 0.15s, transform 0.1s;
+  text-decoration: none;
+}
+.cta-btn:hover {
+  background: #ffe066;
+  box-shadow: 0 6px 24px #ffcc0088;
+  transform: scale(1.02);
+}
+
+/* Parallax section style (for About, Departments, Facilities, News, Gallery, Contact) */
+.parallax-section {
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+  min-height: 70vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  padding: 2rem;
+  position: relative;
+}
+.parallax-section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(0,0,0,0.55);
+  z-index: 1;
+}
+.parallax-content {
+  background: rgba(255,255,255,0.96);
+  padding: 2.5rem;
+  border-radius: 18px;
+  max-width: 800px;
+  width: 90vw;
+  margin: 0 auto;
+  box-shadow: 0 6px 32px rgba(0,55,102,0.10), 0 2px 8px rgba(0,0,0,0.04);
+  position: relative;
+  z-index: 2;
+  color: #003366;
+  text-align: center;
+}
+.departments-grid, .facilities-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+  margin-top: 1.5rem;
+}
+.department-card, .facility-card {
+  background: #f8f9fa;
+  border-radius: 14px;
+  box-shadow: 0 2px 12px #00336622;
+  padding: 1.2rem 2rem;
+  min-width: 220px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: box-shadow 0.2s, transform 0.2s;
+}
+.department-card:hover, .facility-card:hover {
+  box-shadow: 0 8px 32px #00336644;
+  transform: translateY(-4px) scale(1.04);
+}
+.department-icon, .facility-icon {
+  font-size: 2.2rem;
+  margin-bottom: 0.7rem;
+}
+.department-name, .facility-name {
+  font-size: 1.15rem;
+  font-weight: 500;
+  color: #003366;
+  text-align: center;
+}
+.departments-section, .facilities-section {
+  margin-bottom: 2rem;
+}
+.departments-section h2, .facilities-section h2, .gallery-section h2 {
+  color: #003366;
+  margin-bottom: 1.2rem;
+  font-size: 2rem;
+}
+
+/* News section style */
+.news-marquee {
+  background: #003366;
+  color: #fff;
+  padding: 0.7rem 1rem;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px #00336622;
+  overflow-x: auto;
+  white-space: nowrap;
+  width: 100%;
+  margin-bottom: 1rem;
+}
+.news-marquee a {
+  color: #ffcc00;
+  text-decoration: underline;
+  font-weight: 500;
+}
+.news-scroll {
+  display: inline-block;
+  animation: scrollNews 18s linear infinite;
+}
+@keyframes scrollNews {
+  0% { transform: translateX(100%); }
+  100% { transform: translateX(-100%); }
+}
+
+/* Gallery section style */
+.gallery-section {
+  margin: 2rem auto;
+  padding: 2rem;
+  max-width: 850px;
+  border-radius: 18px;
+  box-shadow: 0 6px 32px rgba(0,55,102,0.10), 0 2px 8px rgba(0,0,0,0.04);
+  text-align: center;
+}
+.gallery-grid {
+  display: flex;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 1rem;
+}
+.gallery-img {
+  width: 220px;
+  height: 140px;
+  object-fit: cover;
+  border-radius: 12px;
+  box-shadow: 0 2px 12px #00336622;
+  transition: transform 0.1s, box-shadow 0.1s;
+}
+.gallery-img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 32px #00336644;
+}
+
+/* Contact section and footer styles */
+.contact-section {
+  text-align: center;
+  margin: 1.5rem auto;
+}
+.social-links {
+  margin-top: 1rem;
+  font-size: 1.08rem;
+}
+.social-links a {
+  color: #003366;
+  font-weight: bold;
+  margin: 0 0.5rem;
+  text-decoration: none;
+  transition: color 0.15s;
+}
+.social-links a:hover {
+  color: #ffcc00;
+}
+.footer {
+  background: linear-gradient(90deg, #003366 70%, #0055a5 100%);
+  color: #fff;
+  text-align: center;
+  padding: 1.2rem 0;
+  margin-top: auto;
+  font-size: 1.08rem;
+  letter-spacing: 1px;
+  box-shadow: 0 -2px 8px rgba(0,0,0,0.06);
+}
+
+/* Responsive design */
+@media (max-width: 900px) {
+  .parallax-content {
+    padding: 1.5rem 1rem;
+    max-width: 95vw;
+  }
+  .hero h1 {
+    font-size: 2.5rem;
+  }
+  .hero p {
+    font-size: 1.1rem;
+  }
+  .department-card, .facility-card, .gallery-img {
+    min-width: 200px;
+  }
+}
+
+@media (max-width: 600px) {
+  .navbar {
+    flex-direction: column;
+    align-items: center;
+    padding: 0.8rem 1rem;
+  }
+  .nav-links {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.7rem;
+    margin-top: 0.8rem;
+  }
+  .hero h1 {
+    font-size: 2rem;
+  }
+  .gallery-img {
+    width: 150px;
+    height: 100px;
+  }
+  .parallax-section {
+    min-height: 60vh;
+    padding: 1rem 0.5rem;
+  }
+  .department-card, .facility-card {
+    min-width: 180px;
+    padding: 0.8rem 1.5rem;
+  }
+}
+
+
+:root {
+  --college-blue: #003366;
+  --college-yellow: #ffcc00;
+  --college-blue-light: #0055a5;
+  --college-card-bg: #f8f9fa;
+}
